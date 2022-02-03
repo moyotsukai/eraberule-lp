@@ -2,6 +2,7 @@ import React from 'react'
 import { css } from '@emotion/react'
 import OpenAppButton from '../functional/OpenAppButton'
 import Spacer from '../ui/Spacer'
+import FeatureCard from '../functional/FeatureCard'
 
 const IndexPage: React.FC = () => {
   return (
@@ -24,45 +25,40 @@ const IndexPage: React.FC = () => {
         </p>
         <Spacer y={50} />
         <OpenAppButton isOnHeader={false} />
-        <Spacer y={80} />
+        <Spacer y={70} />
       </div>
 
-      <div css={containerStyle}>
-        <div css={groupStyle}>
-          <h2 css={subTitleStyle}>
-            多様なルールを手軽に
-          </h2>
-          <p css={textStyle}>
-            多数決だけが決め方ではありません。ErabeRuleの目的は、様々な投票ルールを体験し、より身近なものにすることです。投票ルームを作成して参加を呼びかけましょう。
-          </p>
-        </div>
+      <div>
+        <FeatureCard
+          title="多様な決め方を手軽に"
+          imageSrc="/images/home_1.png"
+        >
+          多数決だけが決め方ではありません。ErabeRuleの目的は、様々な投票ルールを体験し、より身近なものにすることです。投票ルームを作成して参加を呼びかけましょう。
+        </FeatureCard>
+        <div css={spacerStyle} />
 
-        <div css={groupStyle}>
-          <h2 css={subTitleStyle}>
-            アカウント作成の必要なし
-          </h2>
-          <p css={textStyle}>
-            アカウント登録は必要ありません。投票に参加する際も、QRコードを読み取るだけ。参加者は一つの投票につき１回まで投票でき、票はすべて匿名で集計されます。
-          </p>
-        </div>
+        <FeatureCard
+          title="アカウント作成の必要なし"
+          imageSrc="/images/home_2.png"
+        >
+          アカウント登録は必要ありません。投票に参加する際も、QRコードを読み取るだけ。参加者は一つの投票につき１回まで投票でき、票はすべて匿名で集計されます。
+        </FeatureCard>
+        <div css={spacerStyle} />
 
-        <div css={groupStyle}>
-          <h2 css={subTitleStyle}>
-            「もし〇〇だったら」を検証
-          </h2>
-          <p css={textStyle}>
-            いくつかの投票ルールでは、他の決め方を採用していたらどのような結果になっていたかシミュレーションできます。
-          </p>
-        </div>
+        <FeatureCard
+          title="「もし〇〇だったら」を検証"
+          imageSrc="/images/home_3.png"
+        >
+          いくつかの投票ルールでは、他の決め方を採用していたらどのような結果になっていたかシミュレーションできます。
+        </FeatureCard>
+        <div css={spacerStyle} />
 
-        <div css={groupStyle}>
-          <h2 css={subTitleStyle}>
-            リアルタイムで集計
-          </h2>
-          <p css={textStyle}>
-            投票の結果は自動で計算され、リアルタイムで画面に反映されます。
-          </p>
-        </div>
+        <FeatureCard
+          title="リアルタイムで集計"
+          imageSrc="/images/home_4.png"
+        >
+          投票の結果は自動で計算され、リアルタイムで画面に反映されます。
+        </FeatureCard>
       </div>
     </div>
   )
@@ -97,21 +93,11 @@ const textStyle = css`
     font-size: 18px;
   }
 `
-const containerStyle = css`
-  padding: 0 15px;
-`
-const groupStyle = css`
-  max-width: 500px;
-  text-align: left;
-`
-const subTitleStyle = css`
-  font-size: 20px;
-  color: #060A1A;
-  margin: 10px 0;
-  line-height: 1.6;
+const spacerStyle = css`
+  height: 40px;
 
-  @media(min-width: 500px) {
-    font-size: 23px;
+  @media(min-width: 800px) {
+    height: 10px;
   }
 `
 

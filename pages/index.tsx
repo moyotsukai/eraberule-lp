@@ -3,8 +3,7 @@ import IndexPage from '../components/templates/IndexPage'
 
 const Index: React.FC = () => {
   return (
-    // <IndexPage />
-    <div></div>
+    <IndexPage />
   )
 }
 
