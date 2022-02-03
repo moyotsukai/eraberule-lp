@@ -7,22 +7,18 @@ type Props = {
 }
 
 const OpenAppButton: React.FC<Props> = (props) => {
-  if (props.isOnHeader) {
-    return (
-      <a href="https://app.eraberule.com" css={buttonOnHeaderStyle}>
-        はじめる
-      </a>
-    )
-  } else {
-    return (
-      <a
-        href="https://app.eraberule.com"
-        css={buttonOnPageStyle}
-      >
-        はじめる
-      </a>
-    )
-  }
+  const buttonStyle = props.isOnHeader ? buttonOnHeaderStyle : buttonOnPageStyle
+
+  return (
+    <a
+      href="https://app.eraberule.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      css={buttonStyle}
+    >
+      はじめる
+    </a>
+  )
 }
 
 const buttonOnHeaderStyle = css`
