@@ -1,16 +1,18 @@
 import React from 'react'
 import { css } from '@emotion/react'
-import OpenAppButton from '../functional/OpenAppButton'
 import Spacer from '../ui/Spacer'
 import FeatureCard from '../functional/FeatureCard'
 import { contents } from '../../contents/data'
 import { slashToArray } from '../../utils/slashToArray'
-import { largeTextColor, primaryTextColor } from '../../styles/colors'
+import { largeTextColor, primaryColor, primarySelectedColor, primaryTextColor } from '../../styles/colors'
+import Button from '../ui/Button'
+import OutlineButton from '../ui/OutlineButton'
+import Link from 'next/link'
 
 const IndexPage: React.FC = () => {
   return (
     <div css={layoutStyle}>
-      <div css={heroStyle}>
+      <div>
         <Spacer y={60} />
         <h1 css={titleStyle}>
           {slashToArray(contents.index.hero.title).map((data, index) => (
@@ -27,8 +29,12 @@ const IndexPage: React.FC = () => {
           ))}
         </p>
         <Spacer y={50} />
-        <OpenAppButton isOnHeader={false} />
-        <Spacer y={70} />
+        <Button
+          text="はじめる"
+          url="https://app.eraberule.com"
+          size="standard"
+        />
+        <Spacer y={80} />
       </div>
 
       <div>
@@ -40,12 +46,29 @@ const IndexPage: React.FC = () => {
             >
               {data.text}
             </FeatureCard>
-            {index !== contents.index.features.length - 1 &&
-              < div css={spacerStyle} />
-            }
+            < div css={spacerStyle} />
           </React.Fragment>
         ))}
       </div>
+
+      <div>
+        <div css={infoCardStyle}>
+          <p css={textStyle}>
+            {contents.index.info.text1}
+          </p>
+          <div css={buttonContainerStyle}>
+            <Button
+              text="投票を作成"
+              url="https://app.eraberule.com/create"
+              size="standard"
+            />
+          </div>
+          <Link href="/details" passHref>
+            <a css={detailLinkStyle}>投票ルールの詳細を読む</a>
+          </Link>
+        </div>
+      </div>
+      <Spacer y={10} />
     </div>
   )
 }
@@ -53,8 +76,6 @@ const IndexPage: React.FC = () => {
 const layoutStyle = css`
   min-height: 100vh;
   text-align: center;
-`
-const heroStyle = css`
   padding: 0 15px;
 `
 const titleStyle = css`
@@ -84,6 +105,31 @@ const spacerStyle = css`
 
   @media(min-width: 800px) {
     height: 10px;
+  }
+`
+const infoCardStyle = css`
+  max-width: 1000px;
+  margin: 15px auto;
+  padding: 25px 15px;
+  text-align: left;
+  background-color: ${primarySelectedColor};
+  border-radius: 12px;
+
+  @media(min-width: 800px) {
+    padding: 25px;
+  }
+`
+const buttonContainerStyle = css`
+  display: inline-block;
+  padding: 20px 0 10px 0;
+  margin-right: 10px;
+`
+const detailLinkStyle = css`
+  display: inline-block;
+  color: ${primaryColor};
+
+  &:hover {
+    text-decoration: underline;
   }
 `
 

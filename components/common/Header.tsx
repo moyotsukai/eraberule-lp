@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Logo from '../../public/logo.png'
-import OpenAppButton from '../functional/OpenAppButton'
+import OutlineButton from '../ui/OutlineButton'
 
 const Header: React.FC = () => {
 
@@ -19,7 +19,11 @@ const Header: React.FC = () => {
         </a>
       </Link>
       <div css={spacerStyle} />
-      <OpenAppButton isOnHeader={true} />
+      <OutlineButton
+        text="はじめる"
+        url="https://app.eraberule.com"
+        size="small"
+      />
     </div>
   )
 }

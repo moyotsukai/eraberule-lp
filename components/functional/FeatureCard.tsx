@@ -27,7 +27,6 @@ const FeatureCard: React.FC<Props> = (props) => {
 }
 
 const cardStyle = css`
-  padding: 0 15px;
   margin: 15px 0;
   display: flex;
   justify-content: center;

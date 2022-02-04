@@ -25,7 +25,11 @@ export const contents = {
         imgSrc: "/images/home_4.png",
         text: "投票の結果は自動で計算され、リアルタイムで画面に反映されます。"
       }
-    ]
+    ],
+    info: {
+      text1: "まずは自分の投票ルームを作ってみましょう。",
+      text2: ""
+    }
   },
   footer: {
     sections: [

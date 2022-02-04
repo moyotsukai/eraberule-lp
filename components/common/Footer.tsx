@@ -16,8 +16,9 @@ const Footer: React.FC = () => {
     <footer css={footerStyle}>
       <Spacer y={10} />
       <div css={layoutStyle}>
+        <Spacer y={10} />
         <Link href="/" passHref>
-          <a css={linkStyle}>
+          <a css={logoStyle}>
             <Image
               src={Logo}
               width={144}
@@ -56,6 +57,9 @@ const footerStyle = css`
 const layoutStyle = css`
   max-width: 1000px;
   margin: 0 auto;
+`
+const logoStyle = css`
+  display: inline;
 `
 const containerStyle = css`
   display: flex;
