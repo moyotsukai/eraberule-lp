@@ -10,9 +10,13 @@ const Header: React.FC = () => {
   return (
     <div css={headerStyle}>
       <Link href="/" passHref>
-        <div css={linkStyle}>
-          <Image src={Logo} alt="logo" />
-        </div>
+        <a css={linkStyle}>
+          <Image
+            src={Logo}
+            width={144}
+            height={36}
+            alt="logo" />
+        </a>
       </Link>
       <div css={spacerStyle} />
       <OpenAppButton isOnHeader={true} />
@@ -41,8 +45,6 @@ const spacerStyle = css`
   flex-grow: 1;
 `
 const linkStyle = css`
-  width: 144px;
-  height: 36px;
   cursor: pointer;
 `
 
