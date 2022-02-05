@@ -175,7 +175,6 @@ const TermsPage: React.FC = () => {
         </ul>
       </Text>
       <Spacer y={10} />
-
     </div>
   )
 }

@@ -24,69 +24,34 @@ const PrivacyPage: React.FC = () => {
       <Spacer y={10} />
 
       <p css={subtitleStyle}>
-        第１条（個人情報）
+        第１条（個人情報の収集）
       </p>
-      <Text>
-        「個人情報」とは、個人情報保護法にいう「個人情報」を指すものとし、生存する個人に関する情報であって、当該情報に含まれる氏名、生年月日、住所、電話番号、連絡先その他の記述等により特定の個人を識別できる情報及び容貌、指紋、声紋にかかるデータ、及び健康保険証の保険者番号などの当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。
-      </Text>
+      <ul>
+        <li css={listStyle}>
+          本サービスのユーザーは、
+          <a href="https://firebase.google.com/docs/auth" css={linkStyle}>Firebase Authentication</a>
+          の匿名認証によって識別され、現時点では利用登録なしで利用できます。
+        </li>
+        <li css={listStyle}>
+          本サービスに送信された情報は、
+          <a href="https://firebase.google.com/docs/firestore" css={linkStyle}>Cloud Firestore</a>
+          に保存されます。
+        </li>
+      </ul>
       <Spacer y={10} />
 
       <p css={subtitleStyle}>
-        第条（）
+        第２条（プライバシーポリシーの変更）
       </p>
-      <Text>
-
-      </Text>
+      <ul>
+        <li css={listStyle}>
+          本ポリシーの内容は、法令その他本ポリシーに別段の定めのある事項を除いて、ユーザーに通知することなく、変更することができるものとします。
+        </li>
+        <li css={listStyle}>
+          本サービスの運営者が別途定める場合を除いて、変更後のプライバシーポリシーは、本サイトに掲載したときから効力を生じるものとします。
+        </li>
+      </ul>
       <Spacer y={10} />
-
-      <p css={subtitleStyle}>
-        第条（）
-      </p>
-      <Text>
-
-      </Text>
-      <Spacer y={10} />
-
-      <p css={subtitleStyle}>
-        第条（）
-      </p>
-      <Text>
-
-      </Text>
-      <Spacer y={10} />
-
-      <p css={subtitleStyle}>
-        第条（）
-      </p>
-      <Text>
-
-      </Text>
-      <Spacer y={10} />
-
-      <p css={subtitleStyle}>
-        第条（）
-      </p>
-      <Text>
-
-      </Text>
-      <Spacer y={10} />
-
-      <p css={subtitleStyle}>
-        第条（）
-      </p>
-      <Text>
-
-      </Text>
-      <Spacer y={10} />
-
-      <p css={subtitleStyle}>
-        第条（）
-      </p>
-      <Text>
-
-      </Text>
-      <Spacer y={10} />
-
     </div>
   )
 }
