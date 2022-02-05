@@ -155,7 +155,7 @@ export const contents = {
           },
           {
             title: "フィードバック",
-            url: "/feedback"
+            url: "https://forms.gle/viQzz59d9HYoZgFF6"
           }
         ]
       },
