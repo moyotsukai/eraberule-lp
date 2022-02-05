@@ -6,13 +6,16 @@ import { primaryShadowColor, primaryTextColor } from '../../styles/colors'
 import { breakedText } from '../../utils/breakedText'
 import Image from 'next/image'
 import Divider from '../ui/Divider'
+import PageTitle from '../ui/PageTitle'
+import Text from '../ui/Text'
 
 const DetailsPage: React.FC = () => {
   return (
     <div css={layoutStyle}>
-      <h1 css={titleStyle}>
+      <PageTitle>
         {contents.details.title}
-      </h1>
+
+      </PageTitle>
       <ul css={tableStyle}>
         {contents.details.rules.map((rule, index) => (
           <li key={index} css={groupStyle}>
@@ -25,7 +28,7 @@ const DetailsPage: React.FC = () => {
                 {
                   data.startsWith("/")
                     ? <div css={imageContainerStyle}><Image src={data} width={300} height={300} /></div>
-                    : <p key={index} css={textStyle}>{breakedText(data)}</p>
+                    : <Text>{breakedText(data)}</Text>
                 }
               </React.Fragment>
             ))}
@@ -33,7 +36,6 @@ const DetailsPage: React.FC = () => {
           </li>
         ))}
       </ul>
-      <Spacer y={10} />
     </div>
   )
 }
@@ -43,17 +45,6 @@ const layoutStyle = css`
   max-width: 700px;
   margin: 0 auto;
   padding: 0 15px;
-`
-const titleStyle = css`
-  text-align: center;
-  font-size: 21px;
-  color: ${primaryTextColor};
-  margin: 20px 0;
-  line-height: 1.7;
-
-  @media(min-width: 500px) {
-    font-size: 23px;
-  }
 `
 const tableStyle = css`
   text-align: left;
@@ -76,16 +67,6 @@ const imageContainerStyle = css`
   max-height: 300px;
   margin: 0 auto;
   box-shadow: 0 2px 8px 0 ${primaryShadowColor};
-`
-const textStyle = css`
-  font-size: 17px;
-  color: ${primaryTextColor};
-  line-height: 1.7;
-  margin: 5px 0 20px 0;
-
-  @media(min-width: 500px) {
-    font-size: 18px;
-  }
 `
 
 export default DetailsPage

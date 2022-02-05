@@ -10,6 +10,7 @@ function MyApp({ Component, pageProps }) {
       <Header />
       <Spacer y={60} />
       <Component {...pageProps} />
+      <Spacer y={10} />
       <Footer />
     </React.Fragment>
   )

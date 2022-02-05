@@ -66,7 +66,6 @@ const IndexPage: React.FC = () => {
           </Link>
         </div>
       </div>
-      <Spacer y={10} />
     </div>
   )
 }

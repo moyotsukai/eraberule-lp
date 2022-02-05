@@ -67,6 +67,19 @@ export const contents = {
       }
     ]
   },
+  tech: {
+    title: "技術情報",
+    description: "本アプリは主に以下のような技術を使っています。",
+    techs: [
+      "Firebase Authentication",
+      "Cloud Firestore",
+      "Next.js",
+      "Recoil",
+      "Emotion",
+      "Framer Motion",
+      "Vercel"
+    ]
+  },
   footer: {
     sections: [
       {
