@@ -13,7 +13,7 @@ const FeatureCard: React.FC<Props> = (props) => {
   return (
     <div css={cardStyle}>
       <div css={imageStyle}>
-        <Image src={props.imageSrc} width={600} height={400} />
+        <Image src={props.imageSrc} width={600} height={400} alt="" />
       </div>
       <div css={textGroupStyle}>
         <h2 css={titleStyle}>

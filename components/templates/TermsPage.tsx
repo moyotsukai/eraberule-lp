@@ -4,10 +4,13 @@ import PageTitle from '../ui/PageTitle'
 import Text from '../ui/Text'
 import { primaryTextColor } from '../../styles/colors'
 import Spacer from '../ui/Spacer'
+import Seo from '../common/Seo'
 
 const TermsPage: React.FC = () => {
   return (
     <div css={layoutStyle}>
+      <Seo title="利用規約 - ErabeRule" />
+
       <PageTitle>
         利用規約
       </PageTitle>
@@ -143,7 +146,15 @@ const TermsPage: React.FC = () => {
       <Spacer y={10} />
 
       <p css={subtitleStyle}>
-        第７条（権利義務の譲渡の禁止）
+        第７条（通知または連絡）
+      </p>
+      <Text>
+        ユーザーと本サービスの運営者との間の通知または連絡は、運営者の定める方法によって行うものとします。本サービスの運営者はユーザーが入力した連絡先は有効なものとみなして当該連絡先へ通知または連絡を行い、これらは発信時にユーザーへ到達したものとみなします。
+      </Text>
+      <Spacer y={10} />
+
+      <p css={subtitleStyle}>
+        第８条（権利義務の譲渡の禁止）
       </p>
       <Text>
         ユーザーは、本サービスの運営者の書面による事前の承諾なく、利用契約上の地位または本規約に基づく権利もしくは義務を第三者に譲渡し、または担保に供することはできません。
@@ -151,7 +162,7 @@ const TermsPage: React.FC = () => {
       <Spacer y={10} />
 
       <p css={subtitleStyle}>
-        第８条（準拠法・裁判管轄）
+        第９条（準拠法・裁判管轄）
       </p>
       <Text>
         <ul>

@@ -7,10 +7,13 @@ import { slashToArray } from '../../utils/slashToArray'
 import { largeTextColor, primaryColor, primarySelectedColor, primaryTextColor } from '../../styles/colors'
 import Button from '../ui/Button'
 import Link from 'next/link'
+import Seo from '../common/Seo'
 
 const IndexPage: React.FC = () => {
   return (
     <div css={layoutStyle}>
+      <Seo title="ErabeRule" />
+
       <div>
         <h1 css={titleStyle}>
           {slashToArray(contents.index.hero.title).map((data, index) => (

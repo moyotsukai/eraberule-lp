@@ -6,10 +6,13 @@ import { supportingTextColor } from '../../styles/colors'
 import { breakedText } from '../../utils/breakedText'
 import PageTitle from '../ui/PageTitle'
 import Text from '../ui/Text'
+import Seo from '../common/Seo'
 
 const ChangelogPage: React.FC = () => {
   return (
     <div css={layoutStyle}>
+      <Seo title="リリースノート - ErabeRule" />
+
       <PageTitle>
         {contents.changelog.title}
       </PageTitle>

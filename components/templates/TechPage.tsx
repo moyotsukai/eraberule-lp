@@ -3,10 +3,13 @@ import { css } from '@emotion/react'
 import { contents } from '../../contents/data'
 import PageTitle from '../ui/PageTitle'
 import Text from '../ui/Text'
+import Seo from '../common/Seo'
 
 const TechPage: React.FC = () => {
   return (
     <div css={layoutStyle}>
+      <Seo title="技術情報 - ErabeRule" />
+
       <PageTitle>
         {contents.tech.title}
       </PageTitle>

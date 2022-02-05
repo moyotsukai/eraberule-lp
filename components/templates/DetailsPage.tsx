@@ -8,10 +8,13 @@ import Image from 'next/image'
 import Divider from '../ui/Divider'
 import PageTitle from '../ui/PageTitle'
 import Text from '../ui/Text'
+import Seo from '../common/Seo'
 
 const DetailsPage: React.FC = () => {
   return (
     <div css={layoutStyle}>
+      <Seo title="投票ルールの詳細 - ErabeRule" />
+
       <PageTitle>
         {contents.details.title}
 
@@ -24,11 +27,17 @@ const DetailsPage: React.FC = () => {
             </p>
             <Divider />
             {rule.descriptions.map((data, index) => (
-              <React.Fragment>
+              <React.Fragment key={index}>
                 {
                   data.startsWith("/")
-                    ? <div css={imageContainerStyle}><Image src={data} width={300} height={300} /></div>
-                    : <Text>{breakedText(data)}</Text>
+                    ?
+                    <div css={imageContainerStyle}>
+                      <Image src={data} width={300} height={300} alt="" />
+                    </div>
+                    :
+                    <Text>
+                      {breakedText(data)}
+                    </Text>
                 }
               </React.Fragment>
             ))}
