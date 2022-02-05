@@ -1,11 +1,6 @@
 import React from 'react'
 import { css } from '@emotion/react'
-import Spacer from '../ui/Spacer'
 import { contents } from '../../contents/data'
-import { primaryShadowColor, primaryTextColor } from '../../styles/colors'
-import { breakedText } from '../../utils/breakedText'
-import Image from 'next/image'
-import Divider from '../ui/Divider'
 import PageTitle from '../ui/PageTitle'
 import Text from '../ui/Text'
 
