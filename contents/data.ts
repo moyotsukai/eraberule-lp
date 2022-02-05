@@ -113,12 +113,6 @@ export const contents = {
       }
     ]
   },
-  terms: {
-
-  },
-  privacy: {
-
-  },
   footer: {
     sections: [
       {
