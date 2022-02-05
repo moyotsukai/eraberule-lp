@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
               <p css={titleStyle}>{section.title}</p>
               {section.pages.map((data, index) => (
                 <Link href={data.url} passHref key={index}>
-                  {data.title.startsWith("/")
+                  {data.url.startsWith("/")
                     ? <a css={linkStyle}>{data.title}</a>
                     : <a target="_blank" rel="noopener noreferrer" css={linkStyle}>{data.title}</a>
                   }

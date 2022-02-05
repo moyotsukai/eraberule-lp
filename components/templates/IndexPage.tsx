@@ -6,14 +6,12 @@ import { contents } from '../../contents/data'
 import { slashToArray } from '../../utils/slashToArray'
 import { largeTextColor, primaryColor, primarySelectedColor, primaryTextColor } from '../../styles/colors'
 import Button from '../ui/Button'
-import OutlineButton from '../ui/OutlineButton'
 import Link from 'next/link'
 
 const IndexPage: React.FC = () => {
   return (
     <div css={layoutStyle}>
       <div>
-        <Spacer y={60} />
         <h1 css={titleStyle}>
           {slashToArray(contents.index.hero.title).map((data, index) => (
             <span css={noBrStyle} key={index}>
@@ -54,7 +52,7 @@ const IndexPage: React.FC = () => {
       <div>
         <div css={infoCardStyle}>
           <p css={textStyle}>
-            {contents.index.info.text1}
+            {contents.index.info.text}
           </p>
           <div css={buttonContainerStyle}>
             <Button

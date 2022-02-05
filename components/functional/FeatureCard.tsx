@@ -1,6 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import Image from 'next/image'
+import { primaryTextColor } from '../../styles/colors'
 
 type Props = {
   title: string,
@@ -55,9 +56,9 @@ const textGroupStyle = css`
 `
 const titleStyle = css`
   font-size: 21px;
-  color: #060A1A;
+  color: ${primaryTextColor};
   margin: 10px 0;
-  line-height: 1.6;
+  line-height: 1.7;
 
   @media(min-width: 500px) {
     font-size: 23px;
@@ -66,7 +67,7 @@ const titleStyle = css`
 const textStyle = css`
   font-size: 17px;
   color: #060A1A;
-  line-height: 1.6;
+  line-height: 1.7;
 
   @media(min-width: 500px) {
     font-size: 18px;

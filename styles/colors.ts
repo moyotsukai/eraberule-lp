@@ -8,6 +8,5 @@ const largeTextColor = "#0D1433"
 // const supportingTextColor = "#666"
 // const errorColor = "rgb(176, 0, 32)"
 // const errorDisabledColor = "rgba(176, 0, 32, 0.38)"
-// const dividerColor = "#ccc"
 
 export { primaryColor, primaryShadowColor, primarySelectedColor, primaryHoverColor, primaryTextColor, largeTextColor }
