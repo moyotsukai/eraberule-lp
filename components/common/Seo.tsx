@@ -15,10 +15,10 @@ const Seo: React.FC<Props> = (props) => {
       <meta property="og:url" content="https://www.eraberule.com" />
       <meta property="og:title" content="ErabeRule" />
       <meta property="og:description" content="ErabeRuleは、様々な投票ルールを実験的に使うことができる投票アプリです。" />
-      <meta property="og:image" content="https://www.eraberule.com/ogimage_small" />
+      <meta property="og:image" content="https://www.eraberule.com/ogimage_small.png" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={props.title} />
-      <meta name="twitter:image" content="https://www.eraberule.com/ogimage_large" />
+      <meta name="twitter:image" content="https://www.eraberule.com/ogimage_large.png" />
       <meta name="theme-color" content="#fff" />
     </Head>
   )
