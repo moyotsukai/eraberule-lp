@@ -65,7 +65,7 @@ const IndexPage: React.FC = () => {
             />
           </div>
           <Link href="/details" passHref>
-            <a css={detailLinkStyle}>投票ルールの詳細を読む</a>
+            <a css={detailLinkStyle}>投票ルールの詳細</a>
           </Link>
         </div>
       </div>
