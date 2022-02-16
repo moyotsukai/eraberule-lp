@@ -1,16 +1,17 @@
 import React from 'react'
 import { css } from '@emotion/react'
-import { contents } from '../../contents/data'
 import Link from 'next/link'
 import Image from 'next/image'
 import Logo from '../../public/logo.png'
 import { primaryColor, primaryTextColor } from '../../styles/colors'
 import Spacer from '../ui/Spacer'
+import { useLocale } from '../../hooks/useLocale'
 
 const Footer: React.FC = () => {
   const year = new Date().getFullYear()
   const copyYear = year === 2021 ? "2021" : "2021-" + year
-  const sections = contents.footer.sections
+  const { t } = useLocale()
+  const sections = t.footer.sections
 
   return (
     <footer css={footerStyle}>

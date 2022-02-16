@@ -1,6 +1,6 @@
 import React from 'react'
 import { css } from '@emotion/react'
-import { primaryColor, primarySelectedColor, primaryShadowColor } from '../../styles/colors'
+import { primaryColor, primarySelectedColor } from '../../styles/colors'
 
 type Props = {
   text: string,
@@ -33,9 +33,8 @@ const OutlineButton: React.FC<Props> = (props) => {
 }
 
 const buttonStyle = (size: string) => css`
-  width: ${size === "standard" ? "120px" : "90px"};
   height: ${size === "standard" ? "50px" : "40px"};
-  padding: ${size === "standard" ? "9px 19px" : "6px"};
+  padding: ${size === "standard" ? "9px 19px" : "5px 11px"};
   background-color: transparent;
   cursor: pointer;
   border-radius: 6px;

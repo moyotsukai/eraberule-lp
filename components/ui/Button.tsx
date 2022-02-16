@@ -33,9 +33,8 @@ const Button: React.FC<Props> = (props) => {
 }
 
 const buttonStyle = (size: string) => css`
-  width: ${size === "standard" ? "120px" : "90px"};
   height: ${size === "standard" ? "50px" : "40px"};
-  padding: ${size === "standard" ? "10px 20px" : "6px"};
+  padding: ${size === "standard" ? "10px 20px" : "6px 12px"};
   background-color: ${primaryColor};
   cursor: pointer;
   border-radius: 6px;

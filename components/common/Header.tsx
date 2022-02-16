@@ -4,8 +4,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Logo from '../../public/logo.png'
 import OutlineButton from '../ui/OutlineButton'
+import { useLocale } from '../../hooks/useLocale'
+import Spacer from '../ui/Spacer'
+import LanguageMenu from '../functional/LanguageMenu'
 
 const Header: React.FC = () => {
+  const { t } = useLocale()
 
   return (
     <div css={headerStyle}>
@@ -20,10 +24,12 @@ const Header: React.FC = () => {
       </Link>
       <div css={spacerStyle} />
       <OutlineButton
-        text="はじめる"
+        text={t.common.getStarted}
         url="https://app.eraberule.com"
         size="small"
       />
+      <Spacer x={5} />
+      <LanguageMenu />
     </div>
   )
 }

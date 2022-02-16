@@ -1,23 +1,25 @@
 import React from 'react'
 import { css } from '@emotion/react'
-import { contents } from '../../contents/data'
 import PageTitle from '../ui/PageTitle'
 import Text from '../ui/Text'
 import Seo from '../common/Seo'
+import { useLocale } from '../../hooks/useLocale'
 
 const TechPage: React.FC = () => {
+  const { t } = useLocale()
+
   return (
     <div css={layoutStyle}>
-      <Seo title="技術情報 - ErabeRule" />
+      <Seo title={`${t.tech.title} - ErabeRule`} />
 
       <PageTitle>
-        {contents.tech.title}
+        {t.tech.title}
       </PageTitle>
       <Text>
-        {contents.tech.description}
+        {t.tech.description}
       </Text>
       <ul>
-        {contents.tech.techs.map((text, index) => (
+        {t.tech.techs.map((text, index) => (
           <li key={index} css={listStyle}>
             {text}
           </li>

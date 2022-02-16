@@ -2,28 +2,30 @@ import React from 'react'
 import { css } from '@emotion/react'
 import Spacer from '../ui/Spacer'
 import FeatureCard from '../functional/FeatureCard'
-import { contents } from '../../contents/data'
 import { slashToArray } from '../../utils/slashToArray'
 import { largeTextColor, primaryColor, primarySelectedColor, primaryTextColor } from '../../styles/colors'
 import Button from '../ui/Button'
 import Link from 'next/link'
 import Seo from '../common/Seo'
+import { useLocale } from '../../hooks/useLocale'
 
 const IndexPage: React.FC = () => {
+  const { t } = useLocale()
+
   return (
     <div css={layoutStyle}>
       <Seo title="ErabeRule" />
 
       <div>
         <h1 css={titleStyle}>
-          {slashToArray(contents.index.hero.title).map((data, index) => (
+          {slashToArray(t.index.hero.title).map((data, index) => (
             <span css={noBrStyle} key={index}>
               {data}
             </span>
           ))}
         </h1>
         <p css={textStyle}>
-          {slashToArray(contents.index.hero.text).map((data, index) => (
+          {slashToArray(t.index.hero.text).map((data, index) => (
             <span css={noBrStyle} key={index}>
               {data}
             </span>
@@ -31,7 +33,7 @@ const IndexPage: React.FC = () => {
         </p>
         <Spacer y={50} />
         <Button
-          text="はじめる"
+          text={t.common.getStarted}
           url="https://app.eraberule.com"
           size="standard"
         />
@@ -39,7 +41,7 @@ const IndexPage: React.FC = () => {
       </div>
 
       <div>
-        {contents.index.features.map((data, index) => (
+        {t.index.features.map((data, index) => (
           <React.Fragment key={index}>
             <FeatureCard
               title={data.title}
@@ -55,17 +57,19 @@ const IndexPage: React.FC = () => {
       <div>
         <div css={infoCardStyle}>
           <p css={textStyle}>
-            {contents.index.info.text}
+            {t.index.info.text}
           </p>
           <div css={buttonContainerStyle}>
             <Button
-              text="投票を作成"
+              text={t.common.createVote}
               url="https://app.eraberule.com/create"
               size="standard"
             />
           </div>
           <Link href="/details" passHref>
-            <a css={detailLinkStyle}>投票ルールの詳細</a>
+            <a css={detailLinkStyle}>
+              {t.common.aboutVotingMethods}
+            </a>
           </Link>
         </div>
       </div>

@@ -5,14 +5,17 @@ import Text from '../ui/Text'
 import { primaryTextColor } from '../../styles/colors'
 import Spacer from '../ui/Spacer'
 import Seo from '../common/Seo'
+import { useLocale } from '../../hooks/useLocale'
 
 const PrivacyPage: React.FC = () => {
+  const { t } = useLocale()
+
   return (
     <div css={layoutStyle}>
-      <Seo title="プライバシーポリシー - ErabeRule" />
+      <Seo title={`${t.privacy.title} - ErabeRule`} />
 
       <PageTitle>
-        プライバシーポリシー
+        {t.privacy.title}
       </PageTitle>
       <Text>
         運営者は、

@@ -5,11 +5,14 @@ import Text from '../ui/Text'
 import { primaryTextColor } from '../../styles/colors'
 import Spacer from '../ui/Spacer'
 import Seo from '../common/Seo'
+import { useLocale } from '../../hooks/useLocale'
 
 const TermsPage: React.FC = () => {
+  const { t } = useLocale()
+
   return (
     <div css={layoutStyle}>
-      <Seo title="利用規約 - ErabeRule" />
+      <Seo title={`${t.terms.title} - ErabeRule`} />
 
       <PageTitle>
         利用規約

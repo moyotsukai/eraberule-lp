@@ -1,23 +1,26 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import Spacer from '../ui/Spacer'
-import { contents } from '../../contents/data'
 import { supportingTextColor } from '../../styles/colors'
 import { breakedText } from '../../utils/breakedText'
 import PageTitle from '../ui/PageTitle'
 import Text from '../ui/Text'
 import Seo from '../common/Seo'
+import { changelogs } from '../../contents/changelogs'
+import { useLocale } from '../../hooks/useLocale'
 
 const ChangelogPage: React.FC = () => {
+  const { t } = useLocale()
+
   return (
     <div css={layoutStyle}>
-      <Seo title="リリースノート - ErabeRule" />
+      <Seo title={`${t.changelog.title} - ErabeRule`} />
 
       <PageTitle>
-        {contents.changelog.title}
+        {t.changelog.title}
       </PageTitle>
       <ul>
-        {contents.changelog.changes.map((item, index) => (
+        {changelogs.map((item, index) => (
           <li key={index}>
             <p css={dateStyle}>{item.date}</p>
             <Text>{breakedText(item.text)}</Text>

@@ -1,7 +1,6 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import Spacer from '../ui/Spacer'
-import { contents } from '../../contents/data'
 import { primaryShadowColor, primaryTextColor } from '../../styles/colors'
 import { breakedText } from '../../utils/breakedText'
 import Image from 'next/image'
@@ -9,18 +8,21 @@ import Divider from '../ui/Divider'
 import PageTitle from '../ui/PageTitle'
 import Text from '../ui/Text'
 import Seo from '../common/Seo'
+import { useLocale } from '../../hooks/useLocale'
 
 const DetailsPage: React.FC = () => {
+  const { t } = useLocale()
+
   return (
     <div css={layoutStyle}>
-      <Seo title="投票ルールの詳細 - ErabeRule" />
+      <Seo title={`${t.details.title} - ErabeRule`} />
 
       <PageTitle>
-        {contents.details.title}
+        {t.details.title}
 
       </PageTitle>
       <ul css={tableStyle}>
-        {contents.details.rules.map((rule, index) => (
+        {t.details.rules.map((rule, index) => (
           <li key={index} css={groupStyle}>
             <p css={ruleNameStyle}>
               {rule.name}
