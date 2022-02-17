@@ -23,6 +23,7 @@ const LanguageButton: React.FC<Props> = (props) => {
 const buttonStyle = css`
   min-width: 140px;
   min-height: 40px;
+  margin: 0;
   text-align: left;
   background-color: #fff;
   cursor: pointer;
