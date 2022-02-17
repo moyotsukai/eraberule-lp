@@ -28,8 +28,8 @@ const Header: React.FC = () => {
         url="https://app.eraberule.com"
         size="small"
       />
-      <Spacer x={5} />
-      <LanguageMenu />
+      {/* <Spacer x={5} />
+      <LanguageMenu /> */}
     </div>
   )
 }
