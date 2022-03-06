@@ -15,22 +15,22 @@ const ja: Locale = {
     features: [
       {
         title: "多様な決め方を手軽に",
-        imgSrc: "/images/home_1.png",
+        imgSrc: "/images/ja_home_1.png",
         text: "多数決だけが決め方ではありません。ErabeRuleの目的は、様々な投票ルールを体験し、より身近なものにすることです。投票ルームを作成して参加を呼びかけましょう。"
       },
       {
         title: "アカウント作成の必要なし",
-        imgSrc: "/images/home_2.png",
+        imgSrc: "/images/ja_home_2.png",
         text: "アカウント登録は必要ありません。投票に参加する際も、QRコードを読み取るだけ。参加者は一つの投票につき１回まで投票でき、票はすべて匿名で集計されます。"
       },
       {
         title: "「もし〇〇だったら」を検証",
-        imgSrc: "/images/home_3.png",
+        imgSrc: "/images/ja_home_3.png",
         text: "いくつかの投票ルールでは、他の決め方を採用していたらどのような結果になっていたかシミュレーションできます。"
       },
       {
         title: "リアルタイムで集計",
-        imgSrc: "/images/home_4.png",
+        imgSrc: "/images/ja_home_4.png",
         text: "投票の結果は、各投票ルールに基づいて自動で計算され、リアルタイムで画面に反映されます。"
       }
     ],

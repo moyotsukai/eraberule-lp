@@ -15,22 +15,22 @@ const en: Locale = {
     features: [
       {
         title: "Custom Voting Rules",
-        imgSrc: "/images/home_1.png",
+        imgSrc: "/images/en_home_1.png",
         text: "Majority rule is not the only way to make a group decision. By offering various voting methods, ErabeRule aims at letting you be familiar with them."
       },
       {
         title: "No Need to Create Account",
-        imgSrc: "/images/home_2.png",
+        imgSrc: "/images/en_home_2.png",
         text: "You do not need to sign up. By using QR codes, you can share your voting rooms smoothly with the participants. Each participant can vote only once per poll. Polls are always anonymous."
       },
       {
         title: "What-If Analysis",
-        imgSrc: "/images/home_3.png",
+        imgSrc: "/images/en_home_3.png",
         text: "In some voting methods, you can simulate the results based on the methods you did not choose."
       },
       {
         title: "Live Polls",
-        imgSrc: "/images/home_4.png",
+        imgSrc: "/images/en_home_4.png",
         text: "The result is calculated automatically under each voting method, and participants can see them in real time."
       }
     ],
