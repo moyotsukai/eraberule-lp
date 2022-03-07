@@ -73,6 +73,39 @@ const ja: Locale = {
           "一番良いと思う候補を一つ選びます。"
         ]
       }
+    ],
+    referenceTitle: "参考文献",
+    references: [
+      {
+        sourceF: "坂井豊貴.　「決め方」の経済学　「みんなの意見のまとめ方」を科学する.　３刷,　ダイヤモンド社,　2019,　222p.",
+        link: "",
+        sourceB: ""
+      },
+      {
+        sourceF: "坂井豊貴.　多数決を疑う　社会的選択理論とは何か.　13刷,　岩波書店,　2020,　180p.",
+        link: "",
+        sourceB: ""
+      },
+      {
+        sourceF: "Michel Balinski,　Rida Laraki.　\"A theory of measuring, electing, and ranking\".　PNAS.　",
+        link: "https://www.pnas.org/content/104/21/8720",
+        sourceB: "(参照2021-03-19)"
+      },
+      {
+        sourceF: "山本芳嗣.　\"1人1票からMajority Judgmentへ\".　",
+        link: "http://www.orsj.or.jp/archive2/or57-06/or57_6_295.pdf",
+        sourceB: "(参照2021-03-19)"
+      },
+      {
+        sourceF: "\"Understanding Majority Judgement\".　open agora.　",
+        link: "https://blog.open-agora.com/en/understanding-majority-judgement-polling-in-slack",
+        sourceB: "(参照2021-03-19)"
+      },
+      {
+        sourceF: "Stephen Bosworth,　Anders Corr,　Stevan Leonard.　\"Legislatures Elected by Evaluative Proportional Representation(EPR): An Algorithm\".　JPR.",
+        link: "https://www.jpolrisk.com/legislatures-elected-by-evaluative-proportional-representation-epr-an-algorithm-v2",
+        sourceB: "(参照2021-03-19)"
+      }
     ]
   },
   tech: {

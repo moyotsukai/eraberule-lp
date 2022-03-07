@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import en from '../locales/en'
 import ja from '../locales/ja'
+import { Locale } from '../types/Locale.type'
 
 const locales = {
   ja: ja,
@@ -9,7 +10,7 @@ const locales = {
 
 export const useLocale = () => {
   const { locale } = useRouter()
-  const t = locales[locale]
+  const t: Locale = locales[locale]
 
   return { locale, t }
 }

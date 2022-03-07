@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import Spacer from '../ui/Spacer'
-import { primaryShadowColor, primaryTextColor } from '../../styles/colors'
+import { primaryColor, primaryShadowColor, primaryTextColor } from '../../styles/colors'
 import { breakedText } from '../../utils/breakedText'
 import Image from 'next/image'
 import Divider from '../ui/Divider'
@@ -30,23 +30,51 @@ const DetailsPage: React.FC = () => {
             <Divider />
             {rule.descriptions.map((data, index) => (
               <React.Fragment key={index}>
-                {
-                  data.startsWith("/")
-                    ?
-                    <div css={imageContainerStyle}>
-                      <Image src={data} width={300} height={300} alt="" />
-                    </div>
-                    :
-                    <Text>
-                      {breakedText(data)}
-                    </Text>
+                {data.startsWith("/")
+                  ?
+                  <div css={imageContainerStyle}>
+                    <Image src={data} width={300} height={300} alt="" />
+                  </div>
+                  :
+                  <Text>
+                    {breakedText(data)}
+                  </Text>
                 }
               </React.Fragment>
             ))}
-            <Spacer y={20} />
           </li>
         ))}
       </ul>
+      <Spacer y={80} />
+
+      <p css={ruleNameStyle}>
+        {t.details.referenceTitle}
+      </p>
+      <Divider />
+      <ul css={tableStyle}>
+        {t.details.references.map((reference, index) => (
+          <li key={index} css={groupStyle}>
+            {reference.link === ""
+              ?
+              <Text>
+                {reference.sourceF}
+              </Text>
+              :
+              <Text>
+                {reference.sourceF}
+                <div css={inlineBlock}>
+                  <a href={reference.link} target="_blank" rel="noopener noreferrer" css={linkStyle}>
+                    {reference.link}
+                  </a>
+                  {",　"}
+                </div>
+                {reference.sourceB}
+              </Text>
+            }
+          </li>
+        ))}
+      </ul>
+      <Spacer y={20} />
     </div>
   )
 }
@@ -79,5 +107,14 @@ const imageContainerStyle = css`
   margin: 0 auto;
   box-shadow: 0 2px 8px 0 ${primaryShadowColor};
 `
+const inlineBlock = css`
+  display: inline-block;
+`
+const linkStyle = css`
+  color: ${primaryColor};
 
+  &:hover {
+    text-decoration: underline;
+  }
+`
 export default DetailsPage

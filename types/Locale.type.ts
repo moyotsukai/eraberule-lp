@@ -24,6 +24,12 @@ export type Locale = {
     rules: {
       name: string,
       descriptions: string[]
+    }[],
+    referenceTitle: string,
+    references: {
+      sourceF: string,
+      link: string,
+      sourceB: string
     }[]
   },
   tech: {
